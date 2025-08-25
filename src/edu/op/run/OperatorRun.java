@@ -36,9 +36,9 @@ public class OperatorRun {
         // 기존에 개발자가 만든 파일을 가져와서 파일 속 기능이나 변수를 활용할 것이다!
 
         // new OperatorEx().test();
-        op.test();
-        op.method1();
-        op.method2();
+        // op.test();
+        // op.method1();
+        // op.method2();
         op.method3();       // 새로운 객체를 생성해서 객체 내부에 존재하는 기능을 사용하겠다.
     }
 }
