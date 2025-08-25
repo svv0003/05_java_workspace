@@ -39,6 +39,7 @@ public class OperatorRun {
         // op.test();
         // op.method1();
         // op.method2();
-        op.method3();       // 새로운 객체를 생성해서 객체 내부에 존재하는 기능을 사용하겠다.
+        // op.method3();
+        op.method4();       // 새로운 객체를 생성해서 객체 내부에 존재하는 기능을 사용하겠다.
     }
 }

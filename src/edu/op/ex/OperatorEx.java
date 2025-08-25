@@ -60,4 +60,27 @@ public class OperatorEx {
         boolean isTrue = (input1 % input2 == 0);
         System.out.printf("%d는 %d의 배수가 맞는가? %b",  input1, input2, isTrue);
     }
+    public void method4() {
+        // void : return 없이 오직 실행만 한다.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("정수 입력 : ");
+        int input = sc.nextInt();
+
+        // 삼항 연산자
+        // 조건식 ? (참) : (거짓);
+        // isTrue의 변수값이 True라면 (참) 기능 설정
+        //                False라면 (거짓) 기능 설정
+
+        // if (조건식) {
+        //   조건식이 true라면 실행
+        // } else {
+        //   조건식이 false라면 실행
+        // }
+
+        // 에서 if와 (), {}를 생략하여 = ? : 으로 표현한 연산식
+        boolean isTrue = input % 2 == 0;
+
+        String result = isTrue ? "짝수" : "홀수";
+        System.out.printf("%d는 %s입니다.", input, result);
+    }
 }
