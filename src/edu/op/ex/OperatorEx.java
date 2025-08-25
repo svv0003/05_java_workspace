@@ -51,6 +51,7 @@ public class OperatorEx {
     프로그램을 수행하기 전에 정의해야 할 사항이 많다.
      */
     public void method3() {
+        // Scanner 처럼 동일한 클래스는 최초 1회만 호출 후 여러 번 사용 가능하다.
         Scanner sc = new Scanner(System.in);
         System.out.println("첫 번째 숫자 : ");
         int input1 = sc.nextInt();
