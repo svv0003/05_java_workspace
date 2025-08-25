@@ -34,4 +34,29 @@ public class OperatorEx {
             System.out.println("3의 배수가 아닙니다.");
         }
     }
+    // void : 반환할 값이 존재하지 않고, 단순 출력만 진행하는 기능을 뜻한다.
+    /*
+    자바라는 언어는
+    (변수) 바구니 속 데이터가 숫자, 문자, 사람이 만든 크기, 실수 등 데이터를 담을 변수명의 종류부터
+
+    기능을 실행할 때 기능을 실행만 하면 되는 것인지?
+        public void 기능명칭 (매개변수, 파라미터) {
+            수행할 기능 작성
+        }
+    실행 결과를 어딘가에 전달하는 기능인지?
+        public 전달할자료형 기능명칭 (매개변수, 파라미터) {
+        수행할 기능 작성
+        return 전달할데이터;
+    }
+    프로그램을 수행하기 전에 정의해야 할 사항이 많다.
+     */
+    public void method3() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("첫 번째 숫자 : ");
+        int input1 = sc.nextInt();
+        System.out.println("두 번째 숫자 : ");
+        int input2 = sc.nextInt();
+        boolean isTrue = (input1 % input2 == 0);
+        System.out.printf("%d는 %d의 배수가 맞는가? %b",  input1, input2, isTrue);
+    }
 }
