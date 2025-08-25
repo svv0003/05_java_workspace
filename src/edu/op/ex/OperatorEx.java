@@ -83,4 +83,16 @@ public class OperatorEx {
         String result = isTrue ? "짝수" : "홀수";
         System.out.printf("%d는 %s입니다.", input, result);
     }
+    // 홀짝 검사 v2
+    // 이중 삼항 연산자
+    // (T/F) ? true : (T/F) ? true : false;
+    public void method5() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("숫자를 입력하시오 : ");
+        int input = sc.nextInt();
+        boolean isZero = (input == 0);
+        boolean isTrue = (input % 2 == 0);
+        String result = isZero ? "0입니다." : isTrue ? "짝수입니다." : "홀수입니다.";
+        System.out.println(result);
+    }
 }
