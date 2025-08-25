@@ -1,3 +1,5 @@
+package edu.variable;
+
 public class VariableEx2 {
     // main method (= 기능 행동) : 프로그램 실행 구문
     public static void main(String[] args) {
