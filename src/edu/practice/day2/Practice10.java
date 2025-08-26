@@ -1,7 +1,6 @@
 package edu.practice.day2;
 
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Practice10 {
@@ -31,7 +30,7 @@ public class Practice10 {
                 if (newLottery)
             }
 
-        } while (!Objects.equals(choice, "N"));
+        } while (choice != "N");
 
 
     }
