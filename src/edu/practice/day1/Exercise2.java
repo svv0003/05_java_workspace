@@ -3,7 +3,7 @@ package edu.practice.day1;
 import java.util.Scanner;
 
 public class Exercise2 {
-    public void Exercise2() {
+    public void Exam2() {
         Scanner sc = new Scanner(System.in);
         System.out.println("첫 번째 정수 입력 : ");
         int num1 = sc.nextInt();

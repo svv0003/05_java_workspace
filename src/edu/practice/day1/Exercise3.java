@@ -3,7 +3,7 @@ package edu.practice.day1;
 import java.util.Scanner;
 
 public class Exercise3 {
-    public void Exercise3() {
+    public void Exam3() {
         Scanner sc = new Scanner(System.in);
         System.out.print("섭씨를 입력하시오 : ");
         double celsius = sc.nextDouble();

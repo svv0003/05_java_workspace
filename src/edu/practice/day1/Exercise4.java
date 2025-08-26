@@ -3,11 +3,11 @@ package edu.practice.day1;
 import java.util.Scanner;
 
 public class Exercise4 {
-    public void Exercise4() {
+    public void Exam4() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("국어 점수 : \n");
+        System.out.print("국어 점수 : ");
         int korean = sc.nextInt();
-        System.out.print("수학 점수 : \n");
+        System.out.print("수학 점수 : ");
         int math = sc.nextInt();
         System.out.print("영어 점수 : ");
         int english = sc.nextInt();

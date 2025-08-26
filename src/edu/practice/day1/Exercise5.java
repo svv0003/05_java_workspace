@@ -3,7 +3,7 @@ package edu.practice.day1;
 import java.util.Scanner;
 
 public class Exercise5 {
-    public void Exercise5() {
+    public void Exam5() {
         Scanner sc = new Scanner(System.in);
         System.out.print("출생년도 : ");
         int birthyear = sc.nextInt();
