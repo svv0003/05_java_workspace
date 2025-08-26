@@ -30,6 +30,7 @@ public class LoopRun {
 
         // ex2.Exam1();
 
-        ex3.Exam1();
+        // ex3.Exam1();
+        ex3.Exam2();
     }
 }
