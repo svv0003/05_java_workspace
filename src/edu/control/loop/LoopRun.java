@@ -35,6 +35,8 @@ public class LoopRun {
         // ex3.Exam3();
         // ex3.Exam4();
         // ex3.Exam5();
-        ex3.Exam6();
+        // ex3.Exam6();
+        // ex3.Exam7();
+        ex3.Exam8();
     }
 }

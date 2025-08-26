@@ -115,4 +115,44 @@ public class LoopEx3 {
             }
         }
     }
+    // 숫자를 입력 받아서 그 수의 구구단을 출력하기
+    public void Exam7(){
+        System.out.print("출력할 단을 입력하시오 : ");
+        int dan = sc.nextInt();
+
+        System.out.printf("----%d단----\n", dan);
+        for (int i = 1; i <= 9; i++){
+            System.out.printf("%d X %d = %d\n",  dan, i, (dan*i));
+        }
+    }
+    // 비밀번호 "java1234"를 입력하기 전까지 5회 입력 받고, 이후엔 "접속 차단합니다." 메시지 출력하고 종료하기
+    public void Exam8(){
+        String checkPassword = "java1234";
+        int attempts = 0;
+
+        System.out.println("비밀번호를 입력하시오");
+        do {
+            System.out.printf("시도횟수 [%d/5] 비밀번호를 입력하시오 : ", attempts);
+            String input = sc.nextLine();
+
+            if (input.equals(checkPassword)) {
+                System.out.println("Correct!!!");
+                break;
+            } else {
+                System.out.println("Wrong~~~");
+                attempts++;
+            }
+
+            if (attempts > 5) {
+                System.out.println("접속 차단합니다.");
+                break;
+            }
+        }  while(true);
+    }
 }
+
+/*
+숫자 입력 칸에 문자를 입력하면 에러 발생한다.
+-> 예외 처리 (try-catch)를 이용해서 추후 문제 발생하지 않도록 처리한다.
+ */
+
