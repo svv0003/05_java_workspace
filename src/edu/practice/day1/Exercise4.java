@@ -3,6 +3,8 @@ package edu.practice.day1;
 import java.util.Scanner;
 
 public class Exercise4 {
+    // 변수명을 선언하거나 변수명에 데이터를 넣는 것은 메서스 내부에 작성하지 않고,
+    // 보통은 class 파일명 바로 아래에 작성한다.
     public void Exam4() {
         Scanner sc = new Scanner(System.in);
         System.out.print("국어 점수 : ");

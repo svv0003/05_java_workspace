@@ -13,7 +13,7 @@ public class ExerciseRun {
         // ex1.Exam1();
         // ex2.Exam2();
         // ex3.Exam3();
-        // ex4.Exam4();
-        ex5.Exam5();
+        ex4.Exam4();
+        // ex5.Exam5();
     }
 }
