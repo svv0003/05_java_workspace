@@ -4,7 +4,7 @@ package edu.control.loop;
 
 import java.util.Scanner;
 
-public class LoofEx {   // <html>과 같이 페이지 내 코드 시작을 나타내는 구문
+public class LoopEx {   // <html>과 같이 페이지 내 코드 시작을 나타내는 구문
     // 1~10 출력하기
     public void Exam1(){
         /*
@@ -69,17 +69,11 @@ public class LoofEx {   // <html>과 같이 페이지 내 코드 시작을 나�
         System.out.print("숫자 2번 : ");
         int num2 = sc.nextInt();
 
-        int maxN = Math.max(num1,num2);
-        int minN = Math.min(num1,num2);
-
-        for (int i=minN; i<=maxN; i++) {
+        for (int i=Math.max(num1,num2); i<=Math.min(num1,num2); i++) {
             System.out.print(i + " ");
         }
-
     }
 }   // </html>과 같이 페이지 내 코드 종료를 나타내는 구문
-
-
 /*
 주의할 점
 
@@ -91,6 +85,4 @@ BUT
 public class 파일명 {
 
 }
-
-
 */
