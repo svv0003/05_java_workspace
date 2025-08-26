@@ -19,7 +19,7 @@ public class Practice10 {
         String choice;
         do {
             int[] newLottery;
-            System.out.printf("---간단한 로또 번호 생성기---\n생성된 번호 : %s\n다시 생성하시겠습니까? (Y/N)", Arrays.toString(newLottery));
+            System.out.printf("---간단한 로또 번호 생성기---\n생성된 번호 : %s\n다시 생성하시겠습니까? (Y/N) : ", Arrays.toString(newLottery));
             choice = sc.nextLine();
 
             newLottery = new int[6];
