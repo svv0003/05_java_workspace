@@ -6,7 +6,7 @@ public class PracticeRun {
         Practice2 p2 = new Practice2("아이폰 SE3", 27);
         Practice3 p3 = new Practice3("1002-123-123456", 1000000, 0);
         Practice4 p4 = new Practice4("박세원", 2000329, new String[]{"국어", "영어", "수학", "과학", "사회"});
-        Practice5 p5 = new Practice5();
+        Practice5 p5 = new Practice5("KIA", "K5");
 
         // 원하는 문제의 주석을 해제하고 실행하세요
         System.out.println("=== 문제 1: 도서 관리 클래스 ===");
@@ -21,9 +21,9 @@ public class PracticeRun {
         p3.method3("1234", 200000, "현윤선");
 
         System.out.println("\n=== 문제 4: 학생 성적 관리 시스템 ===");
-        p4.method4();
+        // p4.method4();
 
         System.out.println("\n=== 문제 5: 자동차 관리 시스템 ===");
-        //p5.method5();
+        p5.method5(70, 200);
     }
 }
