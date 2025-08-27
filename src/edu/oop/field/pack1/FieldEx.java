@@ -32,3 +32,14 @@ public class FieldEx {
     }
 
 }
+
+/*
+정리
+
+public      : 모든 곳에서 사용 가능하다. (가장 개방적)
+protected   : 같은 패키지 + 자식 클래스에서 사용 가능하다.
+default     : 같은 패키지에서만 사용 가능하다.
+private     : 같은 클래스에서만 사용 가능하다. (가장 제한적)
+
+개방성        : public > protected > default > private
+ */
