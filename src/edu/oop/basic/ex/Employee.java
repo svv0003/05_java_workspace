@@ -25,6 +25,8 @@ public class Employee {
     }
 
 
+
+
     // setter
 
     public void setName(String name) {
@@ -116,12 +118,31 @@ public class Employee {
         else System.out.printf("%s님은 근무년수 %d년으로 승진까지 %d년 더 기다려야 합니다.\n", getName(), getWorkYears(), (3-getWorkYears()));
     }
 
+    // 퇴직금 계산
+    public void retirement(){
+        int retirement = salary * workYears;
+        System.out.printf("%s님의 예상 퇴직금 : %,d만원 (연봉 %,d만원 X 근무년수 %d년) : \n", getName(), retirement, getSalary(), getWorkYears());
+    }
 
+    /*
+    toString()
+    상세 정보를 출력하는 기능 (자바 자체에 존재하는 기능)
+    @return String 문자열 형태로 회사원의 모든 정보를 전달해서 출력한다.
 
+    @Override   -> 추후 함께 공부할 어노테이션
+    @           -> at, 어노테이션
+     */
 
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "이름 = '" + name + '\'' +
+                ", 나이 = " + age +
+                ", 부서 = '" + department + '\'' +
+                ", 직급 = '" + position + '\'' +
+                ", 연봉 = " + salary +
+                ", 사원번호 = '" + employeeId + '\'' +
+                ", 근무년수 = " + workYears +
+                '}';
+    }
 }
