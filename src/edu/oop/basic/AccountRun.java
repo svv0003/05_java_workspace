@@ -46,6 +46,17 @@ public class AccountRun {
         System.out.println(a1Number);
         System.out.println(a1Password);
 
+        System.out.println();
+        // 필수 생성자를 활용하여 데이터 저장하고, 저장된 데이터를 확인하기
+        // 필수 생성자는 Account 클래스에서 활용할 데이터를 외부에서 매개변수 데이터로 필히 넣어줘야 하는 매개변수를 작성한 공간
+        // Account() 소괄호 내부에 작성한 매개변수 순서대로 데이터를 작성해야 한다.
+        // -> 순서 일치하지 않으면 에러 발생
+        //         public Account(String name, String accountNumber, long balance, String password)
+        Account a2 =  new Account("강말숙", "1234-111-2345", 10000, "7777");
+        System.out.println(a2.getName());
+        System.out.println(a2.getAccountNumber());
+        System.out.println(a2.getBalance());
+        System.out.println(a2.getPassword());
 
 
     }
