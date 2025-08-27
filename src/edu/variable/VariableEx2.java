@@ -4,7 +4,7 @@ public class VariableEx2 {
     // main method (= 기능 행동) : 프로그램 실행 구문
     public static void main(String[] args) {
         /* 컴퓨터 값 처리 원칙
-        *   같은 자료형끼리 연ㅅ나, 결과도 같은 자료형
+        *   같은 자료형끼리 연산, 결과도 같은 자료형
         *
         *   형변환
         *   - 다른 자료형끼리 연산하는 경우 자료형을 맞게 변환한다.
