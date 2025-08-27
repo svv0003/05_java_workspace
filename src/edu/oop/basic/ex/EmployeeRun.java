@@ -56,6 +56,26 @@ public class EmployeeRun {
         System.out.println(em3.toString());
 
 
+        // 자기소개, 근무 현황, 연봉 정보, 승진 대상자 확인, 퇴직금 계산
+        em1.introduce();
+        em1.work();
+        em1.salaryInfo();
+        em1.checkPromotion();
+        em1.retirement();
+        System.out.println();
+
+        em2.introduce();
+        em2.work();
+        em2.salaryInfo();
+        em2.checkPromotion();
+        em2.retirement();
+        System.out.println();
+
+        em3.introduce();
+        em3.work();
+        em3.salaryInfo();
+        em3.checkPromotion();
+        em3.retirement();
 
 
     }
