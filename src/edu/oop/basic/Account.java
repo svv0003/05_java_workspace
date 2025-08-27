@@ -165,5 +165,23 @@ public class Account {
 
 
     }
+    // 전달 받은 금액을 balance에 누적한 후 현재 잔액을 콘솔에 출력하기
+    // 메서드      : 반환값 존재하지 않는 메서드 형태 (=void)
+    // 메서드명     : deposit
+    // 매개변수     : long amount
+    // 기능        : balance += amount;
+    // 기능        : System.out.printf("%s의 현재 잔액 : %d", name, balance);
+    public void deposit(long amount) {
+        if (amount > 0){
+            // this. 생략 가능
+            // this이 클래스에서 변수 속성에 어떤 값을 대입한다.
+            // this.balance =
+            this.balance += amount;
+            System.out.printf("%s의 현재 잔액 : %d", name, balance);
+        }
+
+
+
+    }
 }
 

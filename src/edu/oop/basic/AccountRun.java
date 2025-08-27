@@ -59,5 +59,18 @@ public class AccountRun {
         System.out.println(a2.getPassword());
 
 
+        // 각 계좌에 입금
+        a1.deposit(10000);      // 변수 자료형 long  ->  데이터 문제 발생 최소화를 위해 데이터 용량 최대로 설정
+        a1.deposit(2345L);
+        a2.deposit(5000);
+        a2.deposit(10000);
+
+        System.out.println();
+
+        // 각 계좌에서 출금
+        a1.withdraw("1111", 200000);        // 비밀번호 불일치
+        a1.withdraw("1234", 200000);        // 잔액 부족
+        a1.withdraw("1234", 5000);          // 계좌 출금 성공
+
     }
 }
