@@ -48,6 +48,8 @@ public class ShopptingMallMember {
     }
 
     // static 초기화 블록
+    // Run 파일에서 가장 최초로 실행된다.
+    // -> 맨 앞에 출력되거나 변수 값이 초기화된다.
 
     static {
         totalMemberCount = 0;

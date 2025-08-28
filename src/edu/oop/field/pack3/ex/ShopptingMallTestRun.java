@@ -14,15 +14,12 @@ public class ShopptingMallTestRun {
 
         System.out.println("---회원가입---");
         member1.joinMember("user001","김쇼핑","kim@email.com");
-        member1.printMemberInfo();
         System.out.println();
 
         member2.joinMember("user002","박구매","park@email.com");
-        member2.printMemberInfo();
         System.out.println();
 
         member3.joinMember("user003","이주문","lee@email.com");
-        member3.printMemberInfo();
         System.out.println();
 
         System.out.println("---사이트 방문 & 장바구니 추가---");
@@ -36,6 +33,14 @@ public class ShopptingMallTestRun {
 
         member3.visitSite();
         member3.addToCart(51);
+        System.out.println();
+
+        System.out.println("---개별 회원 정보---");
+        member1.printMemberInfo();
+        System.out.println();
+        member2.printMemberInfo();
+        System.out.println();
+        member3.printMemberInfo();
         System.out.println();
 
 
