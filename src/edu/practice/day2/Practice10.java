@@ -1,34 +1,42 @@
 package edu.practice.day2;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Practice10 {
     public void Exam10() {
-        Scanner sc = new Scanner(System.in);
         /*
         === 간단 로또 번호 생성기 ===
-생성된 번호: 3 7 12 18 20
-다시 생성하시겠습니까? (y/n): y
-생성된 번호: 1 5 9 15 19
-다시 생성하시겠습니까? (y/n): n
-프로그램을 종료합니다.
+        생성된 번호: 3 7 12 18 20
+        다시 생성하시겠습니까? (y/n): y
+        생성된 번호: 1 5 9 15 19
+        다시 생성하시겠습니까? (y/n): n
+        프로그램을 종료합니다.
          */
 
 
-        String choice;
         int[] lottery = new int[6];
 
-        do {
-            System.out.printf("---간단한 로또 번호 생성기---\n생성된 번호 : %s\n다시 생성하시겠습니까? (Y/N) : ", Arrays.toString(lottery));
-            choice = sc.nextLine();
-
-            for (int i = 0; i < lottery.length; i++) {
-                lottery[i] = (int) (Math.random() * 45) + 1;
+        for (int i = 0; i < lottery.length; i++) {
+            while (true) {
+                // 중복 검사
+                int randomNum = (int) (Math.random() * 45) + 1;
+                boolean isDuplicate = false;
+                for (int j = 0; j < i; j++) {
+                    if (lottery[j] == randomNum) {
+                        isDuplicate = true;             // 랜덤 번호가 기존 번호에 있다면 break;
+                        break;                          // 중복이 있으니까 for문 탈출하기
+                    }
+                }
+                if (!isDuplicate) {
+                    lottery[i] = randomNum;
+                    break;
+                }
             }
+        }
 
-        } while (choice != "N");
-
+        // 생성된 번호 출력
+        System.out.println("생성된 번호 : " + Arrays.toString(lottery));
+        System.out.println("프로그램을 종료합니다.");
 
     }
 }

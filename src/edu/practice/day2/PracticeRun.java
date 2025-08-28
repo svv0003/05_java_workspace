@@ -21,8 +21,8 @@ public class PracticeRun {
         // ex6.Exam6();
         // ex7.Exam7();
         // ex8.Exam8();
-        ex9.Exam9();
-        // ex10.Exam10();
+        // ex9.Exam9();
+        ex10.Exam10();
 
     }
 }
