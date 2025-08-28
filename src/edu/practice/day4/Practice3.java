@@ -14,13 +14,13 @@ public class Practice3 {
     public static final String CAFE_NAME = "코딩카페";
     public static final double TAX_RATE = 0.1;
 
-    private static int totalOrders;
-    private static int totalSales;
+    private static int totalOrders = 0;
+    private static int totalSales = 0;
 
     private String customerName;
     private String menuItem;
     private int price;
-    private int orderNumber = 0;
+    private static int orderNumber = 0;
 
     static {
         System.out.printf("===%s 시스템 시작 ===\n", CAFE_NAME);
@@ -84,24 +84,21 @@ public class Practice3 {
         return orderNumber;
     }
 
-    public int placeOrder() {
+    public void placeOrder() {
         orderNumber++;
         totalOrders++;
         totalSales += getPrice();
-        int tax = (int)(getPrice() * TAX_RATE);
-        return tax;
     }
 
     public void printReceipt() {
-        // 영수증 출력
-        // 세금포함최종금액계산
+        int tax = (int)(getPrice() * TAX_RATE);
         System.out.printf("====%s 영수증===\n", CAFE_NAME);
-        System.out.println("주문번호 : " + getOrderNumber());
+        System.out.println("주문번호 : " + getOrderNumber() + "번");
         System.out.println("고객명 : " + getCustomerName());
         System.out.println("메뉴 : " + getMenuItem());
-        System.out.println("금액 : " + getPrice());
-        System.out.println("세금 : " + placeOrder());
-        System.out.println("총액 : " + (getPrice()+placeOrder()));
+        System.out.println("금액 : " + getPrice() + "원");
+        System.out.println("세금 : " + tax + "원");
+        System.out.println("총액 : " + (getPrice()+tax) + "원");
         System.out.println("================");
         System.out.println("현재 총 주문수 : " + getTotalOrders() + "건");
         System.out.println("현재 총 매출 : " + getTotalSales() + "원");
