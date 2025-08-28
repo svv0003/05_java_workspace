@@ -59,3 +59,8 @@ public class ShopptingMallTestRun {
 
     }
 }
+/*
+Q1. 왜 totalMemberCount를 작성하면 경고가 나타날까요?
+                                자동완성이 안 될까요?
+System.out.println("전체 회원 수 : " + member1.totalMemberCount + "명");
+ */
