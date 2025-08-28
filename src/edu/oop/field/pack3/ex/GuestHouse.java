@@ -47,6 +47,25 @@ public class GuestHouse {
         System.out.println("---" + GUESTHOUSE_NAME + " 시스템 시작---");
     }
 
+    /*
+    초기화 시
+    1순위로 초기화 : static 변수들이 먼저 초기화된다.
+    public static final String GUESTHOUSE_NAME = "서울 게스트하우스";
+
+    2순위로 초기화 : static {} 블록이 나중에 실행된다.
+                  + 만약 변수 선언 전에 {} 블록을 작성하면 오류 발생한다.
+    static {
+        totalCount = 0;             // 시스템 시작 시 방문자 수 초기화한다.
+        System.out.println("---" + GUESTHOUSE_NAME + " 시스템 시작---");
+    }
+
+    {} 블록 형태의 경우
+    여러 줄의 실행문을 포함해서 작성한다.
+    복잡한 로직, 시스템 메세지 출력을 포함해야 할 경우 사용한다.
+    복잡한 로직이 필요하지 않고, 단순 값 할당만 진행할 경우에는 {} 형태를 작성할 필요 없다.
+
+     */
+
     // 메서드 setter - private 대신 데이터를 보관하는 용도
 
     public void setGuestName(String guestName) {
