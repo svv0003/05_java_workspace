@@ -12,7 +12,7 @@ public class ShopptingMallTestRun {
         ShopptingMallMember member2 = new ShopptingMallMember();
         ShopptingMallMember member3 = new ShopptingMallMember();
 
-
+        System.out.println("---회원가입---");
         member1.joinMember("user001","김쇼핑","kim@email.com");
         member1.printMemberInfo();
         System.out.println();
@@ -25,6 +25,7 @@ public class ShopptingMallTestRun {
         member3.printMemberInfo();
         System.out.println();
 
+        System.out.println("---사이트 방문 & 장바구니 추가---");
         member1.visitSite();
         member1.addToCart(3);
         System.out.println();
