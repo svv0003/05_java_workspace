@@ -23,20 +23,9 @@ public class PracticeRun {
         //Exam3_1.method3();
         //Exam3_2.method3();
 
-        /*
-        System.out.println("\n=== 문제 4: 계산기 테스트 ===");
+        int[] numbers = {1, 2, 3, 4, 5};
+        Exam4.method4(10, 5, 8.0, 1.2, numbers);
 
-        Calculator.calculate(); // 기본 실행
-        System.out.println("두 정수 합: " + Calculator.calculate(10, 5));
-        System.out.println("두 실수 합: " + Calculator.calculate(5.5, 5.2));
-        System.out.println("사칙연산 (10 + 5): " + Calculator.calculate(10, 5, "+"));
-        System.out.println("사칙연산 (10 - 5): " + Calculator.calculate(10, 5, "-"));
-        System.out.println("사칙연산 (10 * 5): " + Calculator.calculate(10, 5, "*"));
-        System.out.println("사칙연산 (10 / 5): " + Calculator.calculate(10, 5, "/"));
 
-        int[] numbers = {10, 20, 25};
-        System.out.println("배열 합계: " + Calculator.calculate(numbers));
-    }
-         */
     }
 }

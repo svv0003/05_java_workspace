@@ -30,6 +30,7 @@ public class Practice4 {
         return a + b;
     }
 
+    /*
     public int calculate(int a, int b, String operation) {
         String plus = "+";
         String minus = "-";
@@ -38,15 +39,67 @@ public class Practice4 {
         if (plus.equals(operation)) return (a + b);
         else if (minus.equals(operation)) return (a - b);
         else if (multiply.equals(operation)) return (a * b);
-        else if (divide.equals(operation)) {
+        }
+    }
+
+
+    public double calculate(int a, int b, String operation) {
+        String divide = "/";
+        if (divide.equals(operation)) {
             if (b == 0) {
                 System.out.println("분모가 0인 경우는 계산을 진행할 수 없습니다.");
-                return a;
-            }
-            else return (a / b);
+            } else return (double)(a / b);
         }
-        return a;
     }
+    */
+
+    public static double calculate(int a, int b, String operation) {
+        switch (operation) {
+            case "+":
+                return a + b;
+            case "-":
+                return a - b;
+            case "*":
+                return a * b;
+            case "/":
+                if (b == 0) {
+                    System.out.println("분모가 0인 경우는 계산을 진행할 수 없습니다.");
+                    return 0;
+                }
+                return (double) a / b; // 정확한 실수 나눗셈
+            default:
+                System.out.println("유효하지 않은 연산자입니다.");
+                return 0;
+        }
+    }
+
+
+    public int calculate(int[] numbers){
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum;
+    }
+
+
+
+
+    public String calculate() {
+        return "계산기 실행";
+    }
+
+    public void method4(int a, int b, double c, double d, int[] numbers){
+        System.out.println("===== 계산기 테스트 =====");
+        System.out.println("두 정수의 합 : " + calculate(a, b));
+        System.out.println("두 실수의 합 : " + calculate(c, d));
+        System.out.printf("사칙연산 %d + %d = %d\n", a, b, (int) calculate(a, b, "+"));
+        System.out.printf("사칙연산 %d - %d = %d\n", a, b, (int) calculate(a, b, "-"));
+        System.out.printf("사칙연산 %d * %d = %d\n", a, b, (int) calculate(a, b, "*"));
+        System.out.printf("사칙연산 %d / %d = %.1f\n", a, b, calculate(a, b, "/"));
+        System.out.println("배열 합계 : " + calculate(numbers));
+        System.out.println("기본 실행 : " + calculate());
+   }
 
 
     /*
