@@ -48,7 +48,7 @@ public class MethodEx {
         return totalOrder;
     }
 
-    // 4) boolean 메서드 (참/거짓 판단)
+    // 4) 반환자료형 = boolean 메서드 (참/거짓 판단)
     public boolean isPopularCafe() {
         int totalOrders = 100;
         boolean result = totalOrders >= 50;
