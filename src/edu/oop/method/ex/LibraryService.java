@@ -2,6 +2,7 @@ package edu.oop.method.ex;
 
 // 도서관 회원 관리 기능 시스템 클래스
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class LibraryService {
@@ -123,6 +124,11 @@ public class LibraryService {
             case 7: // 도서관 통계 확인
                 System.out.println("=== 도서관 운영 통계 ===");
                 // static 변수들과 상수들 출력
+                System.out.println("전체 회원 수 : " + LibraryMember.totalMemberCount);
+                System.out.println("현재 방문자 수 : " + LibraryMember.currentVisitorCount);
+                System.out.println("도서관 이름 : " + LibraryMember.LIBRARY_NAME);
+                System.out.println("도서관 운영 시간 : " + LibraryMember.MAX_BORROW_BOOKS + "권");
+                System.out.println("최소 가입 연령 : " + LibraryMember.MIN_AGE_LIMIT + "세");
                 break;
             }
         }
@@ -145,6 +151,13 @@ public class LibraryService {
         System.out.print("멤버 나이 : ");
         int newAge = sc.nextInt();
 
+        if (newAge < LibraryMember.MIN_AGE_LIMIT) {
+            System.out.println(LibraryMember.MIN_AGE_LIMIT + "세 이하이므로 가입 불가합니다.");
+            // private ㅕㅇㅍ에 접근제한자와 기능명칭 사이에 void가 아닌데 return 해야 할 때 사용하는 트릭
+            // 반환 값을 무조건 작성해야 하기 때문에 null로 처리한다.
+            return null;
+        }
+        LibraryMember.totalMemberCount++;
         return new LibraryMember(newMembership, newName, newNumber, newAge);
     }
 
@@ -172,12 +185,18 @@ public class LibraryService {
 
     private void enterLibrary() {
         // 도서관 입장
+        System.out.print("입장할 고객의 정보를 작성하세요 : ");
+        String customerName = sc.next();
         LibraryMember.currentVisitorCount++;
+        System.out.println(customerName + "님이 도서관에 입장하셨습니다.");
     }
 
     private void exitLibrary() {
         // 도서관 퇴장
+        System.out.print("퇴장할 고객의 정보를 작성하세요 : ");
+        String customerName = sc.next();
         LibraryMember.currentVisitorCount--;
+        System.out.println( customerName + "님이 도서관에 퇴장하셨습니다.");
     }
 
     private void borrowBook(LibraryMember member) {
