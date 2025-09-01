@@ -10,21 +10,29 @@ public class 회사프로그램실행 {
 
         디자이너 des1 = new 디자이너("박디자인", 3001, 3000000, "design", "Figma");
 
+        매니저 mag1 = new 매니저("최관리", 5001, 50000000, "개발1팀", 8, 50000);
+
         // dev1 직원 정보 출력
         dev1.info();
         dev1.work();
         dev1.codeReview();
+        System.out.println();
 
         // dev2 직원 정보 출력
         dev2.info();
         dev2.work();
         dev2.codeReview();
+        System.out.println();
 
         // des1 직원 정보 출력
         des1.info();
         des1.work();
+        System.out.println();
 
-
+        // mag1 직원 정보 출력
+        mag1.info();
+        mag1.work();
+        mag1.meeting();
 
 
 
