@@ -76,7 +76,6 @@ public class MatchingService {
                 m.getMemberId(), m.getMemberName(), m.getAge(), m.getGender(), m.getJob(), m.getMatchingScore());
     }
 
-
     private void updateMemberDetails() {
         System.out.println("어떤 정보를 수정하시겠습니까?");
         System.out.println("1 - 이름\n2 - 나이\n3 - 직업");

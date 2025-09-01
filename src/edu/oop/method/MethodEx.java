@@ -11,7 +11,7 @@ package edu.oop.method;
     return 반환타입에 해당하는 반환값 데이터;
 }
 
-접근제한자 [static] 반환타입 메서드명(매개변수) {
+접근제한자 [static] void 메서드명(매개변수) {
     // 실행할 코드
 }
 

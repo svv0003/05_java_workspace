@@ -153,7 +153,7 @@ public class LibraryService {
 
         if (newAge < LibraryMember.MIN_AGE_LIMIT) {
             System.out.println(LibraryMember.MIN_AGE_LIMIT + "세 이하이므로 가입 불가합니다.");
-            // private ㅕㅇㅍ에 접근제한자와 기능명칭 사이에 void가 아닌데 return 해야 할 때 사용하는 트릭
+            // private 접근제한자와 메소드명 사이에 void가 아닌데 return 해야 할 때 사용하는 트릭
             // 반환 값을 무조건 작성해야 하기 때문에 null로 처리한다.
             return null;
         }
