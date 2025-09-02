@@ -7,6 +7,7 @@ public class Car extends Vehicle {
     public Car() {
         super();
     }
+
     public Car(String brand, String model, int year, String color) {
         super(brand, model, year, color);
     }

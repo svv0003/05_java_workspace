@@ -1,5 +1,7 @@
 package edu.inheritance.ex2;
 
+import edu.inheritance.ex3.GoogleService;
+
 /**
  * 교통수단 클래스 상속 실습 문제
  *
@@ -29,6 +31,24 @@ public class VehicleInheritanceRun {
         Bicycle bike1 = new Bicycle ("트렉", "FX", 2023, "검정색");
         Bicycle bike2 = new Bicycle("자이언트", "이스케이프", 2023, "빨간색", 21, true);
 
+
+        // 다형성 활용해서 한 번에 출력하기
+        // 변수명 : vehicles 배열 형태
+        // 배열 출력 for문 변수명 : info
+        Vehicle[] vehicles = {bike1, bike2, car1, m1};
+
+        for(Vehicle info : vehicles){
+            System.out.println("=== 교통수단 정보 ===");
+            info.showInfo();
+
+            System.out.println("\n=== 시동 걸기 ===");
+            info.start();
+
+            System.out.println("\n=== 정지하기 ===");
+            info.stop();
+        }
+
+        /*
         // ============== 문제 4: 교통수단 정보 출력 ==============
         System.out.println("=== 교통수단 정보 ===");
         car1.showInfo();
@@ -49,6 +69,7 @@ public class VehicleInheritanceRun {
         m1.stop();
         bike1.stop();
         bike2.stop();
+         */
 
 
         // ============== 문제 6: 오버라이딩된 메소드 테스트 ==============

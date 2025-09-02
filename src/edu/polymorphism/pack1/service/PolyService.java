@@ -31,7 +31,11 @@ public class PolyService {
 
     // 아래처럼 형변환하면 사용 가능하지만 데이터가 변경되고 손실이 일어난다.
     // Iphone iphone3 = new SmartPhone();
-    Iphone iphone3 = (Iphone) new SmartPhone();
+    // Iphone iphone3 = (Iphone) new SmartPhone();
+        // Exception in thread "main" java.lang.ClassCastException: class edu.polymorphism.pack1.model.SmartPhone cannot be cast to class edu.polymorphism.pack1.model.Iphone (edu.polymorphism.pack1.model.SmartPhone and edu.polymorphism.pack1.model.Iphone are in unnamed module of loader 'app')
+        //	at edu.polymorphism.pack1.service.PolyService.<init>(PolyService.java:34)
+        //	at edu.polymorphism.pack1.run.PolyRun.main(PolyRun.java:8)
+
     // 현재 코드에선 문제가 일어나지 않지만 코드 실행하면 ClassCastException 클래스가 일치하지 않다며
     // 데이터 변환 시 데이터가 손실되어 문제가 발생한다.
     // SmartPhone을 상속받는 Galaxy와 같은 데이터가 잘못 들어올 수 있기 때문에
@@ -64,6 +68,17 @@ public class PolyService {
         // 위처럼 하나씩 작성하는 것이 아닌 배열 형태로 작성 가능하다.
         // 스마트폰 4대에 대한 정보를 스마트폰공장 공간에 한 번에 넣어줄 수 있다.
         // 그리고 각각의 인덱스에 스마트폰 1대의 정보를 저장한다.
+        SmartPhone[] 스마트폰공장 = new SmartPhone[3];
+        스마트폰공장[0] = 스마트폰1;
+        스마트폰공장[1] = 스마트폰2;
+        // 스마트폰공장[1] = 스마트폰3;
+        스마트폰공장[2] = 스마트폰3;
+
+        스마트폰공장[0].setDisplay("아이폰14 디스플레이");
+        스마트폰공장[1].setDisplay("갤럭시S23 디스플레이");
+        스마트폰공장[2].setDisplay("파이폰 디스플레이");
+
+        /*
         SmartPhone[] 스마트폰공장 = new SmartPhone[4];
         스마트폰공장[0] = 스마트폰1;
         스마트폰공장[1] = 스마트폰2;
@@ -72,6 +87,13 @@ public class PolyService {
         스마트폰공장[0].setDisplay("아이폰14 디스플레이");
         스마트폰공장[1].setDisplay("갤럭시S23 디스플레이");
         스마트폰공장[2].setDisplay("파이폰 디스플레이");
+
+        Exception in thread "main" java.lang.NullPointerException: Cannot invoke "edu.polymorphism.pack1.model.SmartPhone.getDisplay()" because "기기확인" is null
+        at edu.polymorphism.pack1.service.PolyService.method2(PolyService.java:83)
+        at edu.polymorphism.pack1.run.PolyRun.main(PolyRun.java:10)
+
+        스마트폰공장[2]에 대한 객체 정보가 존재하지 않아서 (= null) 발생하는 에러
+         */
 
 
         // 향상된 for문으로 위 형식을 출력하기

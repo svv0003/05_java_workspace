@@ -1,6 +1,6 @@
 package edu.practice.day6;
 
-public class  NaverBlog {
+public class  NaverBlog extends NaverService {
 
     public void search() {
         System.out.println("블로그에서 포스트를 검색합니다.");
