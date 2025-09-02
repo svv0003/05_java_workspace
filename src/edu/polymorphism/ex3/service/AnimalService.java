@@ -1,7 +1,13 @@
 package edu.polymorphism.ex3.service;
 
+// edu.polymorphism.ex3.model 폴더 내부의 모든 문서를 참조하겠다. 설정
 import edu.polymorphism.ex3.model.*;
-
+/*
+import edu.polymorphism.ex3.model.Animal;
+import edu.polymorphism.ex3.model.Dog;
+import edu.polymorphism.ex3.model.Cat;
+import edu.polymorphism.ex3.model.Bird;
+*/
 public class AnimalService {
     public static void display() {
         Dog dog = new Dog("멍멍이", 3, "갈색", "개");

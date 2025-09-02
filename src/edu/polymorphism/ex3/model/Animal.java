@@ -57,11 +57,11 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal = " +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", color='" + color + '\'' +
-                ", type='" + type ;
+        return "Animal : \n" +
+                "name= '" + name +
+                "', age= " + age +
+                ", color= '" + color +
+                "', type= '" + type + "'";
     }
 
 

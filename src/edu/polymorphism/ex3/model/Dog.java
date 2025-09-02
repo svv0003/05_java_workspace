@@ -44,9 +44,8 @@ public class Dog extends Animal {
     @Override
     public String toString() {
         return super.toString() +
-                "breed='" + breed + '\'' +
-                ", isTrained=" + isTrained +
-                '}';
+                ", breed= '" + breed +
+                "' , isTrained= " + isTrained;
     }
 
     @Override
@@ -72,5 +71,7 @@ public class Dog extends Animal {
             System.out.println(name + "은(는) 아직 훈련이 안되었습니다.");
         }
     }
+
+
 
 }

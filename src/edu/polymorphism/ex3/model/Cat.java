@@ -45,9 +45,8 @@ public class Cat extends Animal {
     @Override
     public String toString() {
         return super.toString() +
-                "livesLeft=" + livesLeft +
-                ", isIndoor=" + isIndoor +
-                '}';
+                ", livesLeft= " + livesLeft +
+                ", isIndoor= " + isIndoor;
     }
 
     @Override

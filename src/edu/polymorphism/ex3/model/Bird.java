@@ -43,9 +43,8 @@ public class Bird extends Animal {
     @Override
     public String toString() {
         return super.toString() +
-                "wingSpan=" + wingSpan +
-                ", canFly=" + canFly +
-                '}';
+                ", wingSpan= " + wingSpan +
+                ", canFly= " + canFly;
     }
 
 
