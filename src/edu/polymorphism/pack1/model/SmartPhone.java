@@ -1,4 +1,4 @@
-package edu.polymorphism.pack1;
+package edu.polymorphism.pack1.model;
 
 // 부모 클래스 역할
 /*
@@ -63,6 +63,17 @@ public class SmartPhone {
         return ap;
     }
 
+    public void setDisplay(String display) {
+        this.display = display;
+    }
+
+    public void setNewsAgency(String newsAgency) {
+        this.newsAgency = newsAgency;
+    }
+
+    public void setAp(String ap) {
+        this.ap = ap;
+    }
 
     // toString
     // showInfo와 같은 출력문을 하나씩 작성하지 않아도 알아서 변수명들에 대한 데이터 정보를 출력할 수 있도록
