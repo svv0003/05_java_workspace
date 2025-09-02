@@ -1,9 +1,9 @@
-package edu.polymorphism.ex1;
+package edu.polymorphism.ex1.model;
 
 // 모든 것을 하나의 클래스에 넣은 나쁜 예시
 public class 더조은회사AllInOne {
 
-
+/*
     // 생성자 - 너무 많은 매개변수!
     public 더조은회사AllInOne(String memberName, String memberId, String memberEmail,
                          String memberPhone, String memberAddress, int memberAge,
@@ -111,4 +111,6 @@ public class 더조은회사AllInOne {
             displayFoodInfo();
         }
     }
+
+ */
 }

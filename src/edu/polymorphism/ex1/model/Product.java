@@ -1,4 +1,4 @@
-package edu.polymorphism.ex1;
+package edu.polymorphism.ex1.model;
 
 public class Product {
 
@@ -15,6 +15,29 @@ public class Product {
     public Product() {
     }
 
+
+
+
+    public Product(String productName, String productId, double productPrice, int productStock, String productDescription, String productBrand, double productWeight) {
+        this.productName = productName;
+        this.productId = productId;
+        this.productPrice = productPrice;
+        this.productStock = productStock;
+        this.productDescription = productDescription;
+        this.productBrand = productBrand;
+        this.productWeight = productWeight;
+    }
+
+    /*
+    위 생성자 프로덕트의 경우 초반에 객체를 생성할 때 카테고리 자체를 고려하지 않겠다는 생성자
+    ======> 현재는 카테고리가 필요하지 않지만 상황에 따라 set으로 추가할 수 있다.
+
+    현재 생성자에 존재하는 super 의 경우         38 번 째 생성자  파라미터 내부에 String productCategory 로
+    "전자제품" 카테고리로 들어갈 수 있도록 개발자가 직접적으로 설정
+public Electronics(String productName, String productId, double productPrice, int productStock, String productDescription, String productBrand, double productWeight, String powerConsumption, int warranty) {
+          super(productName,        productId,       productPrice,         "전자제품", productStock, productDescription, productBrand, productWeight);
+
+ */
     public Product(String productName, String productId, double productPrice, String productCategory, int productStock, String productDescription, String productBrand, double productWeight) {
         this.productName = productName;
         this.productId = productId;
@@ -32,6 +55,7 @@ public class Product {
         System.out.println("가격: " + productPrice + "원");
         System.out.println("재고: " + productStock + "개");
         System.out.println("브랜드: " + productBrand);
+        //return false;
     }
 
     public void updateProductStock(int quantity) {
@@ -52,13 +76,6 @@ public class Product {
         double discountedPrice = productPrice * (1 - discountRate);
         System.out.println("할인가: " + discountedPrice + "원 (할인율: " + (discountRate * 100) + "%)");
     }
-
-
-
-
-
-
-
 
 
 }

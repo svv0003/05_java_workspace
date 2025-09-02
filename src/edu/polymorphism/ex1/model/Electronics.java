@@ -1,38 +1,31 @@
-package edu.polymorphism.ex1;
+package edu.polymorphism.ex1.model;
 
 public class Electronics extends Product {
-
-    // Electronics
-    // Product 상속하고, 필드와 기본,매개변수 생성자까지만 작성하기
-    // 전자제품 관련 필드들
     private int warranty; // 보증기간
     private String powerConsumption; // 전력소비량
 
 
+    // {} 형태로 된 블록 접기 펼치기 단축키
+    // ctrl + shift +  + or - 접기 펼치기 가능
 
-    // {} 중괄호 형태 블록 접기/펼치기 단축키
-    // ctrl + shift +  +  : 펼치기
-    // ctrl + shift +  -  : 접기
-
+    // 생성자
     public Electronics() {
     }
-
-    public Electronics(int warranty, String powerConsumption) {
-        this.warranty = warranty;
+    public Electronics(String powerConsumption, int warranty) {
         this.powerConsumption = powerConsumption;
+        this.warranty = warranty;
     }
-
     public Electronics(String productName, String productId, double productPrice, String productCategory, int productStock, String productDescription, String productBrand, double productWeight) {
         super(productName, productId, productPrice, productCategory, productStock, productDescription, productBrand, productWeight);
     }
-
-    public Electronics(String productName, String productId, double productPrice, String productCategory, int productStock, String productDescription, String productBrand, double productWeight, int warranty, String powerConsumption) {
-        super(productName, productId, productPrice, productCategory, productStock, productDescription, productBrand, productWeight);
-        this.warranty = warranty;
+    public Electronics(String productName, String productId, double productPrice, int productStock, String productDescription, String productBrand, double productWeight, String powerConsumption, int warranty) {
+        super(productName, productId, productPrice, "전자제품", productStock, productDescription, productBrand, productWeight);
         this.powerConsumption = powerConsumption;
+        this.warranty = warranty;
     }
-
-    // getter / setter
+    //         Electronics(String,         String,   double, int,     String,   String, double, int, String)
+    //              ("삼성 갤럭시", "PHONE001", 800000.0, 10,  "최신 스마트폰", "삼성", 0.2, 24, "15W");
+    // 게터 세터
     public int getWarranty() {
         return warranty;
     }
@@ -45,10 +38,4 @@ public class Electronics extends Product {
     public void setPowerConsumption(String powerConsumption) {
         this.powerConsumption = powerConsumption;
     }
-
-
-
-
-
-
 }
