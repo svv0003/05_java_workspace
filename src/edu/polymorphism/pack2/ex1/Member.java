@@ -56,11 +56,10 @@ public abstract class Member {
         System.out.println(getMemberName() + "님이 로그아웃하였습니다.");
     }
 
-
     // 추상 메서드
     public abstract double 할인율();
 
-
+    public abstract void 쿠폰과혜택();
 
 
 

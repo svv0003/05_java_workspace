@@ -77,9 +77,11 @@ public class KakaoPay extends KakaoService{
         balance += amount;
         System.out.println(amount + "원 환불 완료. 잔액: " + balance + "원");
     }
+    /*
     public int getBalance(){
         return balance;
     }
+    */
 
 
 
