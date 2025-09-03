@@ -6,6 +6,7 @@ package edu.practice.day7;
  */
 public class PracticeRun {
     public static void main(String[] args) {
+
         System.out.println("=== Java 7일차 상속, 추상화, 다형성 실습문제 실행 ===");
 
         // 문제 1-4: 개별 클래스 테스트

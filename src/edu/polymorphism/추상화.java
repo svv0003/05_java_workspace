@@ -17,6 +17,9 @@ class 앞에 abstract를 작성해야 한다.
 public abstract class 파일명 {
     // 추상화 기능 또한 abstract 작성해야 하며, 중괄호 {}는 생략한다.
 }
+
+추상화     : 특정 구현 기술이 없어 모호한 기능을 나타내는 단어
+             중괄호 {}가 존재하지 않는다는 이유 때문에!!
  */
 
 public abstract class 추상화 {

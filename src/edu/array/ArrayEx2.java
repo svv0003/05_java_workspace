@@ -55,7 +55,7 @@ public class ArrayEx2 {
         // System.arraycopy(arr1,                           원본 배열 변수명
         //                       0,                         원본 복사 시작 인덱스
         //                         arr3,                    복사해 놓을 배열명
-        //                              0,                  복사 배멸 삽입할 인덱스
+        //                              0,                  복사 배열 삽입할 인덱스
         //                                arr1.length);     복사할 총 길이
         System.arraycopy(arr1, 0, arr3, 0, arr1.length);
 

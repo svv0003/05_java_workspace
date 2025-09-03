@@ -31,7 +31,6 @@ public class KakaoTalk extends KakaoService {
     }
 
 
-
     // 추상 메서드
     @Override
     public void startService() {
