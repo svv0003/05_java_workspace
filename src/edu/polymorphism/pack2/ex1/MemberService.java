@@ -9,8 +9,8 @@ public class MemberService {
     //       -> 전역 변수로 설정한 것
 
     일반Member 일반회원 = new 일반Member("M001", "김일반", "kim@email.com");
-    단골Member 단골회원 = new 단골Member("M002", "박단골", "park@email.com");
-    VIPMember VIP회원 = new VIPMember("M003", "최뷔희", "choi@email.com");
+    단골Member 단골회원 = new 단골Member("M002", "박단골", "park@email.com", "배송비할인쿠폰");
+    VIPMember VIP회원 = new VIPMember("M003", "최뷔희", "choi@email.com", "배송비무료쿠폰","무료반품");
 
 
     // 추후 html에서 작성해야 할 내용
