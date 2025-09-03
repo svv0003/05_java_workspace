@@ -1,6 +1,6 @@
 package edu.polymorphism.pack3.ex3;
 
-class ImTada extends TaxiApp {
+class ImTada extends TaxiApp implements TaxiInterface {
     public ImTada(String userName) {
         super("타다", userName);
     }

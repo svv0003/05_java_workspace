@@ -5,8 +5,9 @@ package edu.polymorphism.pack3.ex3;
 
 public interface TaxiInterface {
 
-    void kakao.callTaxi();
-
+     void callTaxi();
+     int calculateFare(int distance);
+     void showDriverInfo();
 
 
 

@@ -1,6 +1,6 @@
 package edu.polymorphism.pack3.ex3;
 
-class KakaoTaxi extends TaxiApp {
+class KakaoTaxi extends TaxiApp implements TaxiInterface{
     public KakaoTaxi(String userName) {
         super("카카오택시", userName);
     }

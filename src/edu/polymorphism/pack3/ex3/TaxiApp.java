@@ -25,8 +25,11 @@ public abstract class TaxiApp {
         System.out.println("💳 " + amount + "원 결제가 완료되었습니다.");
     }
 
+    /*
     // 추상 메서드 (반드시 구현해야 함)
     public abstract void callTaxi();
     public abstract int calculateFare(int distance);
     public abstract void showDriverInfo();
+
+     */
 }
