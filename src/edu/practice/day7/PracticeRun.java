@@ -1,31 +1,31 @@
 package edu.practice.day7;
+
+import edu.practice.day7.model.*; //model 폴더 안에 존재하는 class 문서들 사용하기
+
 /**
  * Java 7일차 상속, 추상화, 다형성 실습문제 실행 클래스
  * 각 문제의 주석을 해제하고 실행하세요
  */
 public class PracticeRun {
     public static void main(String[] args) {
-
-/*
         System.out.println("=== Java 7일차 상속, 추상화, 다형성 실습문제 실행 ===");
 
         // 문제 1-4: 개별 클래스 테스트
         // testKakaoTalk();
-        // testKakaoPay();
-        // testKakaoMap();
+        //  testKakaoPay();
+        //  testKakaoMap();
 
         // 다형성 테스트
         // testPolymorphism();
 
         // 추상 클래스 테스트
-        // testAbstractClass();
+        testAbstractClass();
     }
 
     public static void testKakaoTalk() {
         System.out.println("\n=== KakaoTalk 테스트 ===");
 
         KakaoTalk kakaoTalk = new KakaoTalk("카카오톡", "user01", "채팅왕", 150, true);
-
 
         kakaoTalk.showUserInfo();
         kakaoTalk.login();
@@ -80,9 +80,9 @@ public class PracticeRun {
 
         // 다형성 배열
         KakaoService[] services = {
-                new KakaoTalk("카카오톡", "user01", "채팅왕", true, 150, true),
-                new KakaoPay("카카오페이", "user02", "페이유저", true, 100000, "123-456-789"),
-                new KakaoMap("카카오맵", "user03", "여행러", true, "서울시 강남구", true)
+                new KakaoTalk("카카오톡", "user01", "채팅왕", 150, true),
+                new KakaoPay("카카오페이", "user02", "페이유저", 100000, "123-456-789"),
+                new KakaoMap("카카오맵", "user03", "여행러", "서울시 강남구", true)
         };
 
         System.out.println("=== 모든 서비스 시작 ===");
@@ -163,7 +163,5 @@ public class PracticeRun {
             service.logout();
             System.out.println();
         }
-    */
     }
 }
-
