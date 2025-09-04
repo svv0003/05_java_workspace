@@ -2,7 +2,7 @@ package edu.collection.pack1.service;
 
 // service.ListService 폴더와 클래스를 한 번에 생성하기
 
-import edu.polymorphism.pack1.ex2.model.Book;
+import edu.collection.pack1.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -165,7 +165,49 @@ public class ListService {
         int input = 0;
 
         while(true){
+            System.out.println("""
+도서 관리 시스템
+1. 추가
+2. 전체 조회
+0. 종료
+""");
+            System.out.print("메뉴 번호를 입력하세요 : ");
+            input =  sc.nextInt();
+            sc.nextLine();          // Scanner에 남은 개행 문자 제거 (자동으로 한 줄 바꿈으로 버퍼 생성된다.)
 
+            switch (input){
+                case 0:
+                    System.out.println("도서 프로그램을 종료합니다."); break;
+                case 1:
+                    System.out.println("도서를 추가합니다.");
+                    System.out.print("제목을 입력하세요 : ");
+                    String title = sc.nextLine();
+                    System.out.print("저자를 입력하세요 : ");
+                    String writer = sc.nextLine();
+                    System.out.print("가격을 입력하세요 : ");
+                    int price = sc.nextInt();
+                    sc.nextLine();
+
+                    // List는 모든 자료형 데이터를 담을 수 있다.
+                    // 그런데 List<Book>은 Book class 문서 형태의 데이터들로 이루어진 것들만 담을 수 있다.
+                    // -> 목록 추가 제약 설정
+                    bookList.add(new Book(title, writer, price));   // bookList는 제목, 저자, 가격 형태만 가능하다.
+                    System.out.println("책이 추가되었습니다."); break;
+                case 2:
+                    if (bookList.size() > 0){
+                        System.out.println("도서 목록을 모두 조회합니다.");
+                        for (Book book : bookList) {
+                        /*
+                        System.out.println("제목 : " + book.getTitle());
+                        System.out.println("저자 : " + book.getWriter());
+                        System.out.println("가격 : " + book.getPrice());
+                         */
+                            System.out.println(book);
+                        }
+                    } else System.out.println("도서가 존재하지 않습니다."); break;
+                default:
+                    System.out.println("잘못 입력하셨습니다.");
+            }
         }
 
 

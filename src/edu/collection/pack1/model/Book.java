@@ -4,7 +4,7 @@ package edu.collection.pack1.model;
 // .앞에 작성된 명칭으로 폴더가 생성되고,
 // 폴더 내부에 .뒤에 작성된 명칭으로 클래스를 생성된다.
 
-public class book {
+public class Book {
 
     // 필드 / 속성 / 인스턴스 변수
     private String title;
@@ -14,9 +14,9 @@ public class book {
     // 메서드
     // 기본 생성자 / 파라미터 생성자 / getter / setter / toString
     // 아래 모든 기능들은 추후 @생성자 @파라미터생성자 @게터 @세터 @투스트링과 같은 형태로 가볍고 편하게 작성할 것이다.
-    public book() {
+    public Book() {
     }
-    public book(String title, String writer, int price) {
+    public Book(String title, String writer, int price) {
         this.title = title;
         this.writer = writer;
         this.price = price;
