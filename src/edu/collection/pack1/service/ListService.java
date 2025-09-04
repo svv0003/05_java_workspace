@@ -2,8 +2,11 @@ package edu.collection.pack1.service;
 
 // service.ListService 폴더와 클래스를 한 번에 생성하기
 
+import edu.polymorphism.pack1.ex2.model.Book;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ListService {
 
@@ -133,6 +136,42 @@ public class ListService {
 
     }
 
+    /*
+    List        목록에 관련된 컬랙션
+    ArrayList   배열 형태의 리스트
+        장점    검색 빠르다.
+        단점    중간 삽입, 제거가 느리다.
+        사용    학생 성적 관리 (조회가 많은 경우)
+                게시판 목록 (순서대로 조회하는 경우)
+                설정 값 저장 (수정이 적은 경우)
+
+    LinkedList  서로 연결된 링크 형태의 리스트 (기차)
+        장점    중간 삽입, 제거가 빠르다.
+        단점    검색이 느리다.
+        사용    음악 플레이리스트 (중간에 곡 삽입, 삭제하는 경우)
+                실행 취소 기능 (앞, 뒤로 이동하는 경우)
+                대기열 관리 (앞에서 빼고, 뒤에 넣는 경우)
+
+    대부분의 일반적인 경우에는 ArrayList를 주로 사용하고,
+    LinkedList는 중간에 삽입, 삭제하는 경우가 정말 많을 때만 사용한다.
+     */
+    public void bookManage(){
+
+        // while문 활용해서 도서 추가, 전체 조회, 종료
+
+        List<Book> bookList = new ArrayList<Book>();
+
+        Scanner sc = new Scanner(System.in);
+        int input = 0;
+
+        while(true){
+
+        }
+
+
+
+
+    }
 
 
 

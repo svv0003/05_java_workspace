@@ -115,6 +115,7 @@ public class ListPracticeRun {
         List<Integer> list5 = new ArrayList();
         List 짝수List = new ArrayList();
         List fiveList = new ArrayList();
+        /*
         list5.add(1);
         list5.add(3);
         list5.add(5);
@@ -125,6 +126,17 @@ public class ListPracticeRun {
         list5.add(6);
         list5.add(8);
         list5.add(10);
+         */
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 != 0) {
+                list5.add(i);
+            }
+        }
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                list5.add(i);
+            }
+        }
         System.out.println("리스트 출력 : " + list5);
         for (int i = 0; i < list5.size(); i++) {
             int oneToTen = list5.get(i);
