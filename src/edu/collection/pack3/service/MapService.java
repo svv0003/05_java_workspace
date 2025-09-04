@@ -82,9 +82,47 @@ public class MapService {
 
 
 
-
-
     }
 
+    /*
+    Map에서 for문 대신 순차적으로 데이터를 출력하는 방법
+
+    1) Map.keyset()
+    2) Entry.getKey()       key만 얻어오기
+       Entry.getValue()     value만 얻어오기
+
+     */
+
+    public void method2(){
+        Map<String, String> map2 = new HashMap<>();
+
+        map2.put("학원", "서울시 종로구");
+        map2.put("집", "서울시 중구");
+        map2.put("롯데타워", "서울시 송파구");
+        map2.put("63빌딩", "서울시 영등포구");
+
+        // 1번 방법
+        // 향상된 for문 + Set
+        for (String key : map2.keySet()) {
+            System.out.printf("%-10s : %s\n", key, map2.get(key));
+        }
+        // 1번의 경우 key의 개수만큼 get메서드를 지속적으로 호출한다.
+
+        // 2번 방법
+        // 향상된 for문 + EntrySet
+        // Map이라는 클래스 내부에 Entry라는 기능을 이용해서 key와 value를 확인하는 기능
+        //
+        // 향상된 for문은 항상 끝나기 전 소괄호 ) 앞에 적힌 명칭이 기준이다!!
+        // 1. map2가 어디서 선언되었고, map2 명칭의 공간이 생성되었는지를 확인한다.
+        // 2. Map<String, String> map2 = new HashMap<>();에서 선언된 map2의 자료형을 확인
+        //      문자열, 문자열이기 때문에 아래 들어가는 자료형 또한 Map<String, String>과 동일해야 한다.
+        //      map2에 존재하는 데이터들을 하나씩 꺼내서 확인할 것이기 때문이다.
+
+        for (Map.Entry<String, String> entry : map2.entrySet()) {
+            System.out.printf("%-10s : %s\n", entry.getKey(), entry.getValue());
+        }
+        // 2번의 경우 map1.entrySet()으로 key-value를 하나씩 바로 접근한다.
+        // 2번이 성능상 더 효율적이고, 실무적으로 더 유용하다.
+    }
 
 }
