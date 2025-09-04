@@ -3,7 +3,6 @@ package edu.collection.pack1.service;
 // service.ListService 폴더와 클래스를 한 번에 생성하기
 
 import edu.collection.pack1.model.Book;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,7 +31,25 @@ public class ListService {
         // E는 element 요소의 약자로, 숫자, 문자, 논리형 등의 모든 자료형 데이터가 삽입 가능하다.
         int[] a = {1, 2, 3};
         String[] b = {"1","2","3"};
+/*
+자료형[] 배열명 =
 
+List 리스트명 = new ArrayList();
+List<자료형> 리스트명 = new ArrayList<>();
+
+배열
+해당 자료형의 데이터만 삽입 가능하다.
+
+리스트
+배열의 자료형 제약을 해결하기 위해 만들어진 컬랙션
+배열과 다르게 모든 자료형 데이터를 사입 가능하다.
+
+
+
+ArrayList
+
+
+ */
 
         // List 객체 생성
         // List (인터페이스) : 특정 기능을 기준으로 만들어진 클래스 파일을 이용할 예정이다.

@@ -18,6 +18,7 @@ public class ListPracticeRun {
         problem3();
         problem4();
         problem5();
+        problem6();
 
 
 
@@ -161,7 +162,28 @@ public class ListPracticeRun {
         System.out.println("가장 큰 요소 : " + biggerNum);
 
     }
+    public static void problem6() {
+        System.out.println("=".repeat(20) + "문제6" + "=".repeat(20));
+        List<String> hobbyList = new ArrayList<String>();
+        hobbyList.add("게임");
+        hobbyList.add("요리");
+        hobbyList.add("독서");
+        hobbyList.add("요리");
+        hobbyList.add("요리");
+        System.out.println("리스트 크기 : " + hobbyList.size());
+        System.out.println("리스트 출력 : " + hobbyList);
+        System.out.println("요리 idx : " + hobbyList.indexOf("요리"));
+        // indexOf
+        // 중복된 데이터가 있을 경우 맨 앞에 있는 idx 번호만 출력한다.
+
+        // 요리를 담은 모든 idx를 알고 싶다면?
+        for (int i = 0; i < hobbyList.size(); i++) {
+            if (hobbyList.get(i).equals("요리")) {            // equals   문자열 비교 기능 (같으면 true, 다르면 false)
+                System.out.println(i + "번 째 위치");
+            }
+        }
 
 
 
+    }
 }
