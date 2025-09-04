@@ -5,6 +5,7 @@ package edu.collection.pack1.service;
 import edu.collection.pack1.model.Book;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -159,7 +160,8 @@ public class ListService {
 
         // while문 활용해서 도서 추가, 전체 조회, 종료
 
-        List<Book> bookList = new ArrayList<Book>();
+        // List<Book> bookList = new ArrayList<>();
+        List<Book> bookList = new LinkedList<>();
 
         Scanner sc = new Scanner(System.in);
         int input = 0;
@@ -177,7 +179,7 @@ public class ListService {
 
             switch (input){
                 case 0:
-                    System.out.println("도서 프로그램을 종료합니다."); break;
+                    System.out.println("도서 프로그램을 종료합니다."); return;
                 case 1:
                     System.out.println("도서를 추가합니다.");
                     System.out.print("제목을 입력하세요 : ");
