@@ -1,4 +1,4 @@
-package edu.collection.model;
+package edu.collection.pack1.model;
 
 // 클래스를 생성할 때 .을 사용해서 작성하면
 // .앞에 작성된 명칭으로 폴더가 생성되고,
