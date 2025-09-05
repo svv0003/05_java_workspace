@@ -37,12 +37,16 @@ public class MemberPointManager {
         } else System.out.println("포인트가 부족합니다. 현제 포인트 : " +  pointMap.get(memberId));
     }
     void displayAllMembers(){
-
+        System.out.println("=".repeat(20) + "전체 회원 포인트 조회" + "=".repeat(20));
+        System.out.println(pointMap);
     }
 
-    public void method2(){
-
+    public void method(){
+        pointMap.put("user01", 1000);
+        pointMap.put("user02", 1500);
+        pointMap.put("user03", 500);
     }
+
 
 
 }
