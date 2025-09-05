@@ -19,12 +19,13 @@ public class MemberPointManager {
     }
 
     void earnPoints(String memberId, int points){
-        int point = pointMap.get(memberId);
         if (pointMap.get(memberId) == null) {
             System.out.println("존재하지 않는 회원입니다.");
         } else {
+            int point = pointMap.get(memberId);
             point += points;
             pointMap.put(memberId, point);
+            System.out.println("포인트가 적립되었습니다.\n현재 포인트 : " +  pointMap.get(memberId));
         }
     }
 
@@ -34,8 +35,9 @@ public class MemberPointManager {
         } else if (pointMap.get(memberId) >= points) {
             System.out.printf("%s 님이 %d 포인트를 사용했습니다.\n남은 포인트 : %d\n", memberId, points, pointMap.get(memberId)-points);
             pointMap.put(memberId, pointMap.get(memberId) - points);
-        } else System.out.println("포인트가 부족합니다. 현제 포인트 : " +  pointMap.get(memberId));
+        } else System.out.println("포인트가 부족합니다.\n현제 포인트 : " +  pointMap.get(memberId));
     }
+
     void displayAllMembers(){
         System.out.println("=".repeat(20) + "전체 회원 포인트 조회" + "=".repeat(20));
         System.out.println(pointMap);
@@ -46,7 +48,4 @@ public class MemberPointManager {
         pointMap.put("user02", 1500);
         pointMap.put("user03", 500);
     }
-
-
-
 }

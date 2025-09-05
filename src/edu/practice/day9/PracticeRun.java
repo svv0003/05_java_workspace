@@ -6,6 +6,7 @@ package edu.practice.day9;
  */
 public class PracticeRun {
     public static void main(String[] args) {
+
         PracticeRun runner = new PracticeRun();
 
         System.out.println("=== Java 9일차 Map, 컬렉션 실습문제 실행 ===");
@@ -22,6 +23,7 @@ public class PracticeRun {
         System.out.println("\n=== ProductManager 테스트 ===");
 
         ProductManager pm = new ProductManager();
+        pm.method();
 
         System.out.println("--- 초기 상품 목록 ---");
         pm.displayAllProducts();
@@ -32,11 +34,11 @@ public class PracticeRun {
 
         System.out.println("\n--- 상품 추가 테스트 ---");
         pm.addProduct("P004", "맥북프로", 2500000);
-        pm.addProduct("P001", "갤럭시S24", 1200000); // 중복 테스트
+        pm.addProduct("P001", "갤럭시S24", 1200000);   // 중복 테스트
 
         System.out.println("\n--- 상품 삭제 테스트 ---");
         pm.removeProduct("P003");
-        pm.removeProduct("P999"); // 없는 상품 테스트
+        pm.removeProduct("P999");               // 없는 상품 테스트
 
         System.out.println("\n--- 최종 상품 목록 ---");
         pm.displayAllProducts();
@@ -46,6 +48,7 @@ public class PracticeRun {
         System.out.println("\n=== MemberPointManager 테스트 ===");
 
         MemberPointManager mpm = new MemberPointManager();
+        mpm.method();
 
         System.out.println("--- 초기 회원 목록 ---");
         mpm.displayAllMembers();
@@ -66,7 +69,6 @@ public class PracticeRun {
         mpm.displayAllMembers();
     }
 
-    /*
     public void informationManagementSystem() {
         System.out.println("\n=== 종합 정보 관리 시스템 시뮬레이션 ===");
 
@@ -136,6 +138,5 @@ public class PracticeRun {
         System.out.println("\n통합 시스템 운영 완료");
     }
 
-     */
 }
 
