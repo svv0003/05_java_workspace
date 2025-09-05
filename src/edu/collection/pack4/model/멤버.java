@@ -41,7 +41,6 @@ public class 멤버 {
 
 
     // toString
-
     @Override
     public String toString() {
         return "멤버\n" +
