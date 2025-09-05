@@ -6,6 +6,7 @@ public class WarpperRun {
     public static void main(String[] args) {
 
         JavaAPIService javaAPIService = new JavaAPIService();
+        javaAPIService.method1();
         javaAPIService.method2();
 
     }
