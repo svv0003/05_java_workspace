@@ -74,7 +74,7 @@ public class ExceptionService {
             // throw new IllegalArgumentException("확장자 명칭이 없습니다.")
             // if문과 catch문을 활용해서 출력하기
 
-            if (dotIndex == -1 || dotIndex == (input.length() - 1)) {
+            if (dotIndex == (input.length() - 1)) {
                 throw new IllegalArgumentException("확장자 명칭이 없습니다.");
             }
 
@@ -95,7 +95,55 @@ public class ExceptionService {
         } finally {
             sc.close();
         }
+    }
+
+    public void method5() {
+
+        String DBID = "user1";
+        String DBPW = "pass1";
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("아이디를 입력하세요 : ");
+        String 사용자입력Id = sc.nextLine();
+        System.out.print("비밀번호를 입력하세요 : ");
+        String 사용자입력Pw = sc.nextLine();
 
 
+        try {
+            if(!DBID.equals(사용자입력Id)){
+                throw new UserNotFoundException();
+                // System.out.print 는 개발자가 문제되는 코드의 로직에 대한결과를
+                // 확인하거나 log 와 같은 txt 파일에 소비자가 로그인 하는 순간부터
+                // 로그아웃되는 순간가지 시시각각 기록하는 파일
+                // DB에 저장되어있는 ID 와 소비자가 html에서 작성한 id 가 일치하는지확인하고
+                // DB에 저장되어 있는 아이디가 없으면
+                // 예외문제가 발생하는 상황에서 존재하지 않는 아이디입니다.
+                // 와 같은 경고와 함께 진행하고 있던 기능을 정지
+                // -> throw new 또는 exception의 역할
+                // System.out.println("사용자 입력 아이디가 일치하지 않습니다.");
+            }
+
+            if(!DBPW.equals(사용자입력Pw)){
+                throw new 더조은회사에서비밀번호틀렸을경우Exception("일치하는 회원을 찾을 수 없습니다.");
+            }
+
+            System.out.println(사용자입력Id + " 님 로그인이 완료되었습니다.");
+        } catch (UserNotFoundException e) {
+            //  이 경우 회사 기획부서에서 전달받은 내용 대로 추가 로직 작성하기
+            // 아이디 를찾을 수 없을 때 휴면계정 으로 전환된 것은 아닌지
+            // 와 같은 세부 로직 작성
+        }catch (더조은회사에서비밀번호틀렸을경우Exception e) {
+            // 이 경우 회사 기획부서에서 전달받은 내용 대로 추가 로직 작성하기
+            // 비밀번호를 5회 잘못입력 했을 경우 아이디 비밀번호
+            // 고객센터 전화 후 회사에서 직접적으로 풀어주는 lock 설정 한다던지
+            // 휴면계정 처리하기
+        } catch (Exception e) {
+            //System.out.println("개발자가 모르는 문제 발생");
+            // File 클래스를 이용해서 log.log 와 같은 log 확장자 파일을 생성후
+            // 문제가 생긴 데이터를 모두 .log 라는 파일 안에 작성하여
+            // 개발부서에서 내부적으로 문제를 해결할 수있도록 진행
+        }
     }
 }
+
