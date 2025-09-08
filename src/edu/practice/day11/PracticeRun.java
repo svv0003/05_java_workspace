@@ -7,6 +7,10 @@ public class PracticeRun {
         // fm.method1();
 
         BankAccountManager am = new BankAccountManager();
-        am.method2();
+        // am.method2();
+
+        StoreInventoryManager im = new StoreInventoryManager();
+        im.method3();
+
     }
 }
