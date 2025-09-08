@@ -132,7 +132,6 @@ public class Member {
         this.memberPw = memberPw;
         this.memberAge = memberAge;
     }
-    // 헉
     // 필수생성자를 작성하면 setter 작성할 필요 없이 객체와 필드를 생성하고, 필드에 매개변수 데이터를 바로 할당한다.
     // 하지만 새로운 데이터를 할당하려면 setter가 필요하고, 작성된 값을 호출하려면 getter가 필요하다.
 
@@ -141,7 +140,6 @@ public class Member {
     public void setMemberId(String memberId) {
         this.memberId = memberId;
     }
-    // 헉
     // 새로운 데이터를 객체에 추가하고 싶을 때
     // 필드를 우선 작성하고, setter를 추가해서 데이터를 저장, getter를 추가해서 데이터를 호출한다.
 
