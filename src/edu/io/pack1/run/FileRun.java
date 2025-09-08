@@ -6,6 +6,6 @@ public class FileRun {
     public static void main(String[] args) {
 
         FileService fileService = new FileService();
-        fileService.method3();
+        fileService.method7();
     }
 }
