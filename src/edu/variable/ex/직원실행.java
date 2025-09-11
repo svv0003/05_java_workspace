@@ -1,0 +1,19 @@
+package edu.variable.ex;
+
+public class 직원실행 {
+    public static void main(String[] args) {
+
+        더조은회사 직원1 = new 더조은회사("김개발", "개발팀", 3000);
+        더조은회사 직원2 = new 더조은회사("김기획", "기획팀", 2800);
+        더조은회사 직원3 = new 더조은회사("김그림", "디자인팀", 2600);
+
+        System.out.println(직원1.toString());
+        System.out.println(직원2.toString());
+        System.out.println(직원3.toString());
+        System.out.println();
+        직원서비스.회사정보();
+    }
+}
+
+
+

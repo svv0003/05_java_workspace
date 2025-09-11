@@ -15,8 +15,8 @@ public class 이미지URL실행 {
         String name = sc.nextLine();
         String imgName = name + ".png";
         System.out.print("이미지 폴더 입력 : ");
-        String folderName = sc.nextLine();
+        String imgDir = sc.nextLine();
 
-        service.dirSaveImg(imgURL, imgName, folderName);
+        service.dirSaveImg(imgURL, imgName, imgDir);
     }
 }
