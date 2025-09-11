@@ -193,8 +193,7 @@ file에는 폴더1/폴더2/파일명.txt로 결합하여 사용된다.
      */
     public void readStringMethod() throws IOException {
         Files.readString(path);
-        // Files.readString(path, StandardOpenOption.READ);     이미 READ가 기본값이기 때문에 추가 작성 불가
-
+        //  Files.readString(path ,StandardOpenOption.READ); 이미 READ 가 기본값이기 때문에 추가 작성 불가
     }
 
 
