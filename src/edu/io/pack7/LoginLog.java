@@ -46,4 +46,18 @@ public class LoginLog {
     public String 현재시간가져오기() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
+
+    public void 시간비교() {
+        long a = System.currentTimeMillis();
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println("a : " + a);
+        System.out.println("now : " + now);
+    }
+
+    /*
+System.currentTimeMillis ( )                                                            1970년 01월 01일 00시 00분 00초부터 흐른 시간을 숫자로 표현한다.
+LocalDateTime.now ( )                                                                   현재 시간을 문자열 형태로 출력한다.
+DateTimeFormatter.ofPattern ("회사에서 원하는 시간 형태")                               회사에서 원하는 시간 형태로 변환한다.
+LocalDateTime.now ( ).format (DateTimeFormatter.ofPattern ("yyyy-MM-dd HH:mm:ss"))      지정 시간 형태로 출력한다.
+     */
 }
