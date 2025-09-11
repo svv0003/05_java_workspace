@@ -7,6 +7,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+import java.nio.file.StandardOpenOption;
 
 public class FileEx1 {
 
@@ -129,6 +131,73 @@ resolve ( )
 기본 경로와 새로운 경로, 또는 파일을 결합하는 기능
 file에는 폴더1/폴더2/파일명.txt로 결합하여 사용된다.
          */
+    }
+
+    /********************************************************
+     StandardOpenOption             StandardCopyOption
+     ********************************************************/
+    /*
+    Files.writeString (파일경로/파일명.확장자, 파일내용문);
+    파일에 문자열 작성하는 기능
+     */
+    Path path = Path.of("폴더1/폴더2/파일명.확장자명");
+
+    public void StandardOpenOptionMethod() throws IOException{
+        // 가장 많이 사용하는 형식
+        // 파일이 없으면 생성, 있으면 내용 이어서 작성한다.
+        Files.writeString(path, "로그내용\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        // 파일 무조건 새로 생성, 이어서 작성되지 않는다.
+        Files.writeString(path, "로그내용\n", StandardOpenOption.CREATE);
+        // 파일 무조건 이어서 작성, 파일 존재하지 않을 시 에러 발생
+        Files.writeString(path, "로그내용\n", StandardOpenOption.APPEND);
+        // 새 파일만 생성 (기존 파일 존재하면 오류) 기존파일 건들지 않고, 새로 만들기만 할 때 사용한다.
+        Files.writeString(path, "로그내용\n", StandardOpenOption.CREATE_NEW);
+        // 임시 파일의 경우, 파일 작성하면서 프로그램이 종료되거나 파일이 닫히면 바로 삭제된다.
+        Files.writeString(path, "로그내용\n", StandardOpenOption.CREATE, StandardOpenOption.DELETE_ON_CLOSE);
+
+        // 대상 파일이 이미지 존재해도 덮어쓴다.
+        Files.copy(path, path, StandardCopyOption.REPLACE_EXISTING);
+        Files.move(path, path, StandardCopyOption.REPLACE_EXISTING);
+        // 파일의 속성 (수정일, 생성일)도 함께 복사한다.
+        Files.copy(path, path, StandardCopyOption.COPY_ATTRIBUTES);
+        // 파일 복제할 때 제일 많이 사용하는 방법
+        Files.copy(path, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
+        // 파일 이동을 원칙적으로 수행하지만 이동 중 실패하면 원상복구한다.
+        // C드라이브에서 C드라이브 내에 존재하는 것만 보존
+        // C드라이브에서 D드라이브 이동하는 것은 원상 복구 불가능
+        Files.move(path, path, StandardCopyOption.ATOMIC_MOVE);
+        // 안전하게 파일 이동하고, 실패하면 기존 파일 그대로 위치 유지한다.
+        Files.move(path, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
 
     }
+
+
+    public void writeStringMethod() {
+        try {
+            // 1. 가장 간단한 방법
+            // 파일 없으면 생성, 있으면 덮어쓰기
+            Files.writeString(path,"안녕하세요.");
+            // 2. 옵션과 함께 사용
+            // 반드시 이어서 작성할 때는 CREATE, APPEND 함께 사용한다.
+            // APPEND 작성하는데 파일 없으면 파일 없음 예외 발생
+            // CREATE 작성만하면 계속 새로 만들며, 문자 이어서 작성되지 않는다.
+            Files.writeString(path, "내용", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /*
+    Files.readString (읽어올 일경로/파일명.확장자);
+    파일에 작성된 문자열을 읽는 기능
+     */
+    public void readStringMethod() throws IOException {
+        Files.readString(path);
+        // Files.readString(path, StandardOpenOption.READ);     이미 READ가 기본값이기 때문에 추가 작성 불가
+
+    }
+
+
+
+
 }
