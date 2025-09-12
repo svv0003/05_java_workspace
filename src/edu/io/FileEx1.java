@@ -188,7 +188,7 @@ file에는 폴더1/폴더2/파일명.txt로 결합하여 사용된다.
     }
 
     /*
-    Files.readString (읽어올 일경로/파일명.확장자);
+    Files.readString (읽어올 경로/파일명.확장자);
     파일에 작성된 문자열을 읽는 기능
      */
     public void readStringMethod() throws IOException {

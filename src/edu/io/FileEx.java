@@ -172,8 +172,8 @@ Files.copy (Path.of ("원본파일경로/원본파일명.확장자명"), Path.of
 Files.copy (Path.of ("원본파일경로/원본파일명.확장자명"), Path.of ("복사파일경로/복사파일명.확장자명"), StandardCopyOption.REPLACE_EXISTING);
                                                                                                         복사할 때 덮어쓰기 형태로 복사한다.
 
-Files.copy (Path.of ("원본파일경로/원본파일명.확장자명"), Path.of ("이동할파일경로/(선택적으로변경)복사파일명.확장자명"));
-Files.copy (Path.of ("원본파일경로/원본파일명.확장자명"), Path.of ("복사파일경로/(선택적으로변경)복사파일명.확장자명"), StandardCopyOption.REPLACE_EXISTING);
+Files.move (Path.of ("원본파일경로/원본파일명.확장자명"), Path.of ("이동할파일경로/(선택적으로변경)복사파일명.확장자명"));
+Files.move (Path.of ("원본파일경로/원본파일명.확장자명"), Path.of ("복사파일경로/(선택적으로변경)복사파일명.확장자명"), StandardCopyOption.REPLACE_EXISTING);
                                                                                                                         이동할 때 덮어쓰기 형태로 이동한다.
 
 Files.delete (Path.of ("경로/파일명.확장자명"));             => 파일 삭제 못하면 예외 발생한다.
